@@ -1,0 +1,29 @@
+- name: Create yay folder
+  ansible.builtin.file:
+    path: /opt/yay-git
+    state: directory
+  register: yay_directory
+  become: yes
+
+- name: Checkout repository
+  ansible.builtin.git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "{{ yay_directory.path }}"
+    force: yes
+  become: yes
+
+- name: Set permissions
+  ansible.builtin.file:
+    path: "{{ yay_directory.path }}"
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+  become: yes
+
+- name: Build & install yay
+  ansible.builtin.shell:
+    chdir: "{{ yay_directory.path }}"
+    cmd: makepkg --noconfirm -si
+  register: command_result
+  failed_when: command_result.rc != 0

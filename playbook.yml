@@ -1,0 +1,17 @@
+- hosts: all
+  pre_tasks:
+    - name: Check Ansible version
+      assert:
+        that: "ansible_version.full is version_compare('2.9', '>=')"
+        msg: >
+          "Ansible 2.9 or a more recent version is required (current is {{ ansible_version.full }})."
+    - name: Check Operating System
+      assert:
+        that: "ansible_distribution == 'Archlinux'"
+        msg: >
+          "Archlinux distribution is required (current is {{ ansible_distribution }})."
+  roles:
+   - role: base
+     tags: base
+   - role: chrome
+     tags: chrome

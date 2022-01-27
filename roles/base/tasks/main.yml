@@ -1,0 +1,4 @@
+- include_tasks: init.yml
+  tags: init
+- include_tasks: yay.yml
+  tags: yay

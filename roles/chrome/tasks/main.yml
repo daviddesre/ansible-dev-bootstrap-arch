@@ -1,0 +1,4 @@
+- name: Install chrome
+  shell: yay -S google-chrome --answerdiff N --answerclean A
+  register: command_result
+  failed_when: command_result.rc != 0

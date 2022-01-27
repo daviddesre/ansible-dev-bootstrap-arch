@@ -1,0 +1,34 @@
+- name: Enable AUR repository
+  replace:
+    path: /etc/pamac.conf
+    regexp: "#EnableAUR"
+    replace: "EnableAUR"
+  become: yes
+
+- name: Enable AUR repository updates
+  replace:
+    path: /etc/pamac.conf
+    regexp: "#CheckAURUpdates"
+    replace: "CheckAURUpdates"
+  become: yes
+
+- name: Update pacman cache and upgrade
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
+    upgrade_extra_args: "--noconfirm"
+  become: yes
+
+- name: Install base devel
+  community.general.pacman:
+    name: base-devel
+    extra_args: "--noconfirm"
+    state: present
+  become: yes
+
+- name: Install git
+  community.general.pacman:
+    name: git
+    extra_args: "--noconfirm"
+    state: present
+  become: yes
