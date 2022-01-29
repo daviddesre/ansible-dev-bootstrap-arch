@@ -1,0 +1,7 @@
+- name: Install keepassxc
+  community.general.pacman:
+    name: keepassxc
+    extra_args: "--noconfirm"
+    state: present
+  become: yes
+  tags: keepassxc

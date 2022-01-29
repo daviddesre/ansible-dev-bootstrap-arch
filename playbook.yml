@@ -13,7 +13,5 @@
   roles:
    - role: base
      tags: base
-   - role: chrome
-     tags: chrome
-   - role: vscode
-     tags: vscode
+   - role: tools
+     tags: tools

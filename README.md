@@ -6,6 +6,8 @@ Included tools :
 - [yay](https://github.com/Jguer/yay)
 - Chrome
 - VSCode
+- Filezilla
+- KeepassXC
 
 This playbook has been validated on Manjaro Linux 21.x
 
