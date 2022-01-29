@@ -8,6 +8,8 @@ Included tools :
 - VSCode
 - Filezilla
 - KeepassXC
+- drawio
+- postman
 
 This playbook has been validated on Manjaro Linux 21.x
 

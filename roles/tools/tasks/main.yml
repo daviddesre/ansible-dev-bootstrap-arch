@@ -1,3 +1,5 @@
 - include_tasks: chrome.yml
 - include_tasks: filezilla.yml
 - include_tasks: keepassxc.yml
+- include_tasks: postman.yml
+- include_tasks: drawio.yml

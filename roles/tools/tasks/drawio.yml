@@ -1,0 +1,6 @@
+- name: Install drawio
+  community.general.snap:
+    name: drawio
+  become: yes
+  tags: drawio
+
