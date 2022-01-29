@@ -1,4 +1,6 @@
-- include_tasks: init.yml
-  tags: init
+- include_tasks: base.yml
+  tags: base
+- include_tasks: snap.yml
+  tags: snap
 - include_tasks: yay.yml
   tags: yay

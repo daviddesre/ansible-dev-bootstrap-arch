@@ -5,6 +5,7 @@ Bootstrap an Arch-based distribution for development, with Ansible.
 Included tools :
 - [yay](https://github.com/Jguer/yay)
 - Chrome
+- VSCode
 
 This playbook has been validated on Manjaro Linux 21.x
 
