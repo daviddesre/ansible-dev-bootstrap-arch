@@ -7,3 +7,7 @@ pacman_packages:
   - jq
   - make
   - openssh
+  - libfaketime
+  - fzf
+  - moreutils
+  - shellcheck
