@@ -1,0 +1,9 @@
+pacman_packages:
+  - base-devel
+  - git
+  - direnv
+  - ed
+  - httpie
+  - jq
+  - make
+  - openssh

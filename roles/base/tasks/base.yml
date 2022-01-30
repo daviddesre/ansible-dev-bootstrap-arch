@@ -19,16 +19,10 @@
     upgrade_extra_args: "--noconfirm"
   become: yes
 
-- name: Install base devel
+- name: Install pacman base packages 
   community.general.pacman:
-    name: base-devel
+    name: "{{ item }}"
     extra_args: "--noconfirm"
     state: present
-  become: yes
-
-- name: Install git
-  community.general.pacman:
-    name: git
-    extra_args: "--noconfirm"
-    state: present
+  with_items: "{{ pacman_packages }}"
   become: yes

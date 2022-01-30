@@ -10,6 +10,7 @@ Included tools :
 - KeepassXC
 - drawio
 - postman
+- rclone
 
 This playbook has been validated on Manjaro Linux 21.x
 

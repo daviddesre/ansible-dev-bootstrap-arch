@@ -1,0 +1,7 @@
+- name: Install rclone
+  community.general.pacman:
+    name: rclone
+    extra_args: "--noconfirm"
+    state: present
+  become: yes
+  tags: rclone
