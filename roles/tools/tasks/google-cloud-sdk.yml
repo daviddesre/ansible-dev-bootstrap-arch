@@ -1,0 +1,6 @@
+- name: Install google-cloud-sdk
+  community.general.snap:
+    name: google-cloud-sdk
+    classic: yes
+  become: yes
+  tags: gcloud

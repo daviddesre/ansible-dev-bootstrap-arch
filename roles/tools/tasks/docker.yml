@@ -1,0 +1,7 @@
+- name: Install docker
+  community.general.pacman:
+    name: docker
+    extra_args: "--noconfirm"
+    state: present
+  become: yes
+  tags: docker

@@ -1,0 +1,5 @@
+- name: Install k9s
+  community.general.snap:
+    name: k9s
+  become: yes
+  tags: k9s

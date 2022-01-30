@@ -11,6 +11,10 @@ Included tools :
 - drawio
 - postman
 - rclone
+- Google Cloud SDK
+- Docker
+- Kubectl
+- K9s
 
 This playbook has been validated on Manjaro Linux 21.x
 
