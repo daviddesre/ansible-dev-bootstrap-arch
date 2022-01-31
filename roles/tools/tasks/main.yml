@@ -6,5 +6,5 @@
 - include_tasks: rclone.yml
 - include_tasks: google-cloud-sdk.yml
 - include_tasks: kubectl.yml
-- include_tasks: k9s.yml
 - include_tasks: docker.yml
+- include_tasks: tmux.yml

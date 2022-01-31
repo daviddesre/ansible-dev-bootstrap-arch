@@ -15,3 +15,7 @@
      tags: base
    - role: tools
      tags: tools
+   - role: andrewrothstein.k9s
+     tags:
+       - tools
+       - k9s
