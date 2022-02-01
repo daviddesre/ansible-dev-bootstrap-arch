@@ -1,4 +1,4 @@
-# ansible-manjaro-linux-bootstrap
+# ansible-dev-bootstrap-arch
 
 Bootstrap an Arch-based distribution for development, with Ansible.
 
