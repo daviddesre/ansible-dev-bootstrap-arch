@@ -1,3 +1,15 @@
-- include_tasks: base.yml
+- include_tasks: pacman.yml
+  tags:
+    - repositories
+
 - include_tasks: snap.yml
+  tags:
+    - repositories
+
 - include_tasks: yay.yml
+  tags:
+    - repositories
+
+- include_tasks: packages.yml
+  tags:
+    - tools

@@ -4,6 +4,7 @@
     state: directory
   register: yay_directory
   become: yes
+  tags: yay
 
 - name: Checkout repository
   ansible.builtin.git:
@@ -11,6 +12,7 @@
     dest: "{{ yay_directory.path }}"
     force: yes
   become: yes
+  tags: yay
 
 - name: Set permissions
   ansible.builtin.file:
@@ -20,6 +22,7 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
   become: yes
+  tags: yay
 
 - name: Build & install yay
   ansible.builtin.shell:
@@ -27,3 +30,4 @@
     cmd: makepkg --noconfirm -si
   register: command_result
   failed_when: command_result.rc != 0
+  tags: yay

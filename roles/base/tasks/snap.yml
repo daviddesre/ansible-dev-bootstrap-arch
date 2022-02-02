@@ -4,6 +4,7 @@
     regexp: "#EnableSnap"
     replace: "EnableSnap"
   become: yes
+  tags: snap
 
 - name: Enable support of classic Snap
   ansible.builtin.file:
@@ -11,3 +12,4 @@
     dest: /snap
     state: link
   become: yes
+  tags: snap

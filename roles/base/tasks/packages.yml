@@ -1,13 +1,13 @@
-- name: Install tmux
+- name: Install pacman base packages 
   community.general.pacman:
-    name: tmux
+    name: "{{ item }}"
     extra_args: "--noconfirm"
     state: present
+  with_items: "{{ pacman_packages }}"
   become: yes
-  tags: tmux
-
+  
 - name: Configure tmux
   copy:
     src: tmux.conf
     dest: ~/.tmux.conf
-  
+  tags: tmux

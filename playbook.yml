@@ -13,9 +13,9 @@
   roles:
    - role: base
      tags: base
-   - role: tools
-     tags: tools
-   - role: andrewrothstein.k9s
-     tags:
-       - tools
-       - k9s
+
+   - role: devops
+     tags: devops
+
+   - role: utilities
+     tags: utilities

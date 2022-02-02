@@ -4,6 +4,7 @@
     regexp: "#EnableAUR"
     replace: "EnableAUR"
   become: yes
+  tags: pacman
 
 - name: Enable AUR repository updates
   replace:
@@ -11,6 +12,7 @@
     regexp: "#CheckAURUpdates"
     replace: "CheckAURUpdates"
   become: yes
+  tags: pacman
 
 - name: Update pacman cache and upgrade
   community.general.pacman:
@@ -18,11 +20,4 @@
     upgrade: yes
     upgrade_extra_args: "--noconfirm"
   become: yes
-
-- name: Install pacman base packages 
-  community.general.pacman:
-    name: "{{ item }}"
-    extra_args: "--noconfirm"
-    state: present
-  with_items: "{{ pacman_packages }}"
-  become: yes
+  tags: pacman

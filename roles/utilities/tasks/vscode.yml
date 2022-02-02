@@ -3,3 +3,4 @@
     name: code
     classic: yes
   become: yes
+  tags: vscode

@@ -12,6 +12,7 @@
     name: docker
     enabled: yes
   become: yes
+  tags: docker
 
 - name: Add current user to docker group
   ansible.builtin.user:
@@ -19,3 +20,4 @@
     groups: docker
     append: yes
   become: yes
+  tags: docker
