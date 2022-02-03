@@ -18,6 +18,7 @@ Included tools :
   - [KeePassXC Password Manager](https://keepassxc.org)
   - [draw.io](https://drawio-app.com)
   - [Rclone](https://rclone.org)
+  - [slack](https://slack.com/intl/fr-fr)
 
 - Utilities
   - [yay](https://github.com/Jguer/yay)

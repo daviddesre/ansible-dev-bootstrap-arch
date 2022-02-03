@@ -5,3 +5,4 @@
 - include_tasks: postman.yml
 - include_tasks: drawio.yml
 - include_tasks: rclone.yml
+- include_tasks: slack.yml
