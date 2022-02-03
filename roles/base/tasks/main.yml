@@ -13,3 +13,7 @@
 - include_tasks: packages.yml
   tags:
     - tools
+
+- include_tasks: autojump.yml
+  tags:
+    - tools

@@ -1,0 +1,39 @@
+- name: Create autojump folder
+  ansible.builtin.file:
+    path: /opt/autojump
+    state: directory
+  register: autojump_directory
+  become: yes
+  tags: autojump
+
+- name: Checkout repository
+  ansible.builtin.git:
+    repo: "https://aur.archlinux.org/autojump.git"
+    dest: "{{ autojump_directory.path }}"
+    force: yes
+  become: yes
+  tags: autojump
+
+- name: Set permissions
+  ansible.builtin.file:
+    path: "{{ autojump_directory.path }}"
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+  become: yes
+  tags: autojump
+
+- name: Build & install autojump
+  ansible.builtin.shell:
+    chdir: "{{ autojump_directory.path }}"
+    cmd: makepkg --noconfirm -si
+  register: command_result
+  failed_when: command_result.rc != 0
+  tags: autojump
+
+- name: Integrate with zsh shell
+  ansible.builtin.lineinfile:
+    path: "~/.zshrc"
+    line: "source /usr/share/autojump/autojump.zsh"
+  tags: autojump
