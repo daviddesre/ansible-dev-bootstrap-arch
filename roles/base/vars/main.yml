@@ -1,6 +1,7 @@
 pacman_packages:
   - base-devel
   - git
+  - python-pipenv
   - direnv
   - ed
   - httpie
