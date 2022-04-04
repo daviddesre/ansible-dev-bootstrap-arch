@@ -5,6 +5,9 @@ pacman_packages:
   - direnv
   - ed
   - httpie
+  - iputils
+  - bind
+  - httpie
   - jq
   - make
   - openssh
