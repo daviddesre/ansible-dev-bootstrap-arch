@@ -9,6 +9,7 @@ pacman_packages:
   - bind
   - httpie
   - jq
+  - yq
   - make
   - openssh
   - libfaketime
